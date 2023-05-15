@@ -14,15 +14,15 @@
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="{% static 'myapp/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Web/assets/css/bootstrap.min.css' %}">
 
-    <link rel="stylesheet" type="text/css" href="{% static 'myapp/assets/css/font-awesome.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Web/assets/css/font-awesome.css' %}">
 
-    <link rel="stylesheet" href="{% static 'myapp/assets/css/templatemo-hexashop.css' %}">
+    <link rel="stylesheet" href="{% static 'Web/assets/css/templatemo-hexashop.css' %}">
 
-    <link rel="stylesheet" href="{% static 'myapp/assets/css/owl-carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'Web/assets/css/owl-carousel.css' %}">
 
-    <link rel="stylesheet" href="{% static 'myapp/assets/css/lightbox.css' %}">
+    <link rel="stylesheet" href="{% static 'Web/assets/css/lightbox.css' %}">
 <!--
 
 TemplateMo 571 Hexashop
@@ -53,7 +53,7 @@ https://templatemo.com/tm-571-hexashop
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="{% url 'homelink' %}" class="logo">
-                            <img src="{% static 'myapp/assets/images/logo.png' %}">
+                            <img src="{% static 'Web/assets/images/logo.png' %}">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -67,8 +67,8 @@ https://templatemo.com/tm-571-hexashop
                                 <ul>
                                     <li><a href="{% url 'aboutlink' %}">About Us</a></li>
                                     <li><a href="{% url 'productslink' %}">Products</a></li>
-                                    <li><a href="{% url 'singlelink' %}">Single Product</a></li>
-                                    <li><a href="{% url 'contactlink' %}">Contact Us</a></li>
+                                    <li><a href="">Single Product</a></li>
+                                    <li><a href="">Contact Us</a></li>
                                 </ul>
                             </li>
                             <li class="submenu">
@@ -123,21 +123,22 @@ https://templatemo.com/tm-571-hexashop
         </div>
         <div class="container">
             <div class="row">
+                {% for i in product %}
                 <div class="col-lg-4">
                     <div class="item">
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href=""><i class="fa fa-eye"></i></a></li>
+                                    <li><a href=""><i class="fa fa-star"></i></a></li>
+                                    <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="{% static 'myapp/assets/images/men-01.jpg' %}" alt="">
+                            <img src="{{ i.image.url }}" alt="">
                         </div>
                         <div class="down-content">
-                            <h4>Classic Spring</h4>
-                            <span>$120.00</span>
+                            <h4>{{ i.name }}</h4>
+                            <span>${{ i.price }}</span>
                             <ul class="stars">
                                 <li><i class="fa fa-star"></i></li>
                                 <li><i class="fa fa-star"></i></li>
@@ -148,17 +149,18 @@ https://templatemo.com/tm-571-hexashop
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                {% endfor %}
+                <!-- <div class="col-lg-4">
                     <div class="item">
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href=""><i class="fa fa-eye"></i></a></li>
+                                    <li><a href=""><i class="fa fa-star"></i></a></li>
+                                    <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="{% static 'myapp/assets/images/men-02.jpg' %}" alt="">
+                            <img src="{% static 'Web/assets/images/men-02.jpg' %}" alt="">
                         </div>
                         <div class="down-content">
                             <h4>Air Force 1 X</h4>
@@ -178,12 +180,12 @@ https://templatemo.com/tm-571-hexashop
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href=""><i class="fa fa-eye"></i></a></li>
+                                    <li><a href=""><i class="fa fa-star"></i></a></li>
+                                    <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="{% static 'myapp/assets/images/men-03.jpg' %}" alt="">
+                            <img src="{% static 'Web/assets/images/men-03.jpg' %}" alt="">
                         </div>
                         <div class="down-content">
                             <h4>Love Nana ‘20</h4>
@@ -203,12 +205,12 @@ https://templatemo.com/tm-571-hexashop
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href=""><i class="fa fa-eye"></i></a></li>
+                                    <li><a href=""><i class="fa fa-star"></i></a></li>
+                                    <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="{% static 'myapp/assets/images/women-01.jpg' %}" alt="">
+                            <img src="{% static 'Web/assets/images/women-01.jpg' %}" alt="">
                         </div>
                         <div class="down-content">
                             <h4>New Green Jacket</h4>
@@ -228,12 +230,12 @@ https://templatemo.com/tm-571-hexashop
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href=""><i class="fa fa-eye"></i></a></li>
+                                    <li><a href=""><i class="fa fa-star"></i></a></li>
+                                    <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="{% static 'myapp/assets/images/women-02.jpg' %}" alt="">
+                            <img src="{% static 'Web/assets/images/women-02.jpg' %}" alt="">
                         </div>
                         <div class="down-content">
                             <h4>Classic Dress</h4>
@@ -253,12 +255,12 @@ https://templatemo.com/tm-571-hexashop
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href=""><i class="fa fa-eye"></i></a></li>
+                                    <li><a href=""><i class="fa fa-star"></i></a></li>
+                                    <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="{% static 'myapp/assets/images/women-03.jpg' %}" alt="">
+                            <img src="{% static 'Web/assets/images/women-03.jpg' %}" alt="">
                         </div>
                         <div class="down-content">
                             <h4>Spring Collection</h4>
@@ -278,12 +280,12 @@ https://templatemo.com/tm-571-hexashop
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href=""><i class="fa fa-eye"></i></a></li>
+                                    <li><a href=""><i class="fa fa-star"></i></a></li>
+                                    <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="{% static 'myapp/assets/images/kid-01.jpg' %}" alt="">
+                            <img src="{% static 'Web/assets/images/kid-01.jpg' %}" alt="">
                         </div>
                         <div class="down-content">
                             <h4>School Collection</h4>
@@ -303,12 +305,12 @@ https://templatemo.com/tm-571-hexashop
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href=""><i class="fa fa-eye"></i></a></li>
+                                    <li><a href=""><i class="fa fa-star"></i></a></li>
+                                    <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="{% static 'myapp/assets/images/kid-02.jpg' %}" alt="">
+                            <img src="{% static 'Web/assets/images/kid-02.jpg' %}" alt="">
                         </div>
                         <div class="down-content">
                             <h4>Summer Cap</h4>
@@ -328,12 +330,12 @@ https://templatemo.com/tm-571-hexashop
                         <div class="thumb">
                             <div class="hover-content">
                                 <ul>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="{% url 'singlelink' %}"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href=""><i class="fa fa-eye"></i></a></li>
+                                    <li><a href=""><i class="fa fa-star"></i></a></li>
+                                    <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                 </ul>
                             </div>
-                            <img src="{% static 'myapp/assets/images/kid-03.jpg' %}" alt="">
+                            <img src="{% static 'Web/assets/images/kid-03.jpg' %}" alt="">
                         </div>
                         <div class="down-content">
                             <h4>Classic Kid</h4>
@@ -347,7 +349,7 @@ https://templatemo.com/tm-571-hexashop
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-lg-12">
                     <div class="pagination">
                         <ul>
@@ -381,7 +383,7 @@ https://templatemo.com/tm-571-hexashop
                 <div class="col-lg-3">
                     <div class="first-item">
                         <div class="logo">
-                            <img src="{% static 'myapp/assets/images/white-logo.png' %}" alt="hexashop ecommerce templatemo">
+                            <img src="{% static 'Web/assets/images/white-logo.png' %}" alt="hexashop ecommerce templatemo">
                         </div>
                         <ul>
                             <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
@@ -437,26 +439,26 @@ https://templatemo.com/tm-571-hexashop
     
 
     <!-- jQuery -->
-    <script src="{% static 'myapp/assets/js/jquery-2.1.0.min.js' %}"></script>
+    <script src="{% static 'Web/assets/js/jquery-2.1.0.min.js' %}"></script>
 
     <!-- Bootstrap -->
-    <script src="{% static 'myapp/assets/js/popper.js' %}"></script>
-    <script src="{% static 'myapp/assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'Web/assets/js/popper.js' %}"></script>
+    <script src="{% static 'Web/assets/js/bootstrap.min.js' %}"></script>
 
     <!-- Plugins -->
-    <script src="{% static 'myapp/assets/js/owl-carousel.js' %}"></script>
-    <script src="{% static 'myapp/assets/js/accordions.js' %}"></script>
-    <script src="{% static 'myapp/assets/js/datepicker.js' %}"></script>
-    <script src="{% static 'myapp/assets/js/scrollreveal.min.js' %}"></script>
-    <script src="{% static 'myapp/assets/js/waypoints.min.js' %}"></script>
-    <script src="{% static 'myapp/assets/js/jquery.counterup.min.js' %}"></script>
-    <script src="{% static 'myapp/assets/js/imgfix.min.js' %}"></script> 
-    <script src="{% static 'myapp/assets/js/slick.js' %}"></script> 
-    <script src="{% static 'myapp/assets/js/lightbox.js' %}"></script> 
-    <script src="{% static 'myapp/assets/js/isotope.js' %}"></script> 
+    <script src="{% static 'Web/assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'Web/assets/js/accordions.js' %}"></script>
+    <script src="{% static 'Web/assets/js/datepicker.js' %}"></script>
+    <script src="{% static 'Web/assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'Web/assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'Web/assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'Web/assets/js/imgfix.min.js' %}"></script> 
+    <script src="{% static 'Web/assets/js/slick.js' %}"></script> 
+    <script src="{% static 'Web/assets/js/lightbox.js' %}"></script> 
+    <script src="{% static 'Web/assets/js/isotope.js' %}"></script> 
     
     <!-- Global Init -->
-    <script src="{% static 'myapp/assets/js/custom.js' %}"></script>
+    <script src="{% static 'Web/assets/js/custom.js' %}"></script>
 
     <script>
 

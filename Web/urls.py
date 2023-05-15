@@ -1,11 +1,9 @@
 from django.urls import path
+from .views import *
 
-# from Web.views import 
-
-
-# urlpatterns = [
-#     path('/', , name= ),
-#     path('/', , name= ),
-#     path('/', , name= )
-
-# ]
+urlpatterns = [
+    path('', home_page, name='homelink'),
+    path('about/', about_page, name='aboutlink'),
+    path('products/', products_page, name='productslink'),
+    path('<int:pk>/', singleproduct_page, name='singlelink')
+]

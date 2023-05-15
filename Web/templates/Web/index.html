@@ -14,15 +14,15 @@
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="{% static 'myapp/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Web/assets/css/bootstrap.min.css' %}">
 
-    <link rel="stylesheet" type="text/css" href="{% static 'myapp/assets/css/font-awesome.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Web/assets/css/font-awesome.css' %}">
 
-    <link rel="stylesheet" href="{% static 'myapp/assets/css/templatemo-hexashop.css' %}">
+    <link rel="stylesheet" href="{% static 'Web/assets/css/templatemo-hexashop.css' %}">
 
-    <link rel="stylesheet" href="{% static 'myapp/assets/css/owl-carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'Web/assets/css/owl-carousel.css' %}">
 
-    <link rel="stylesheet" href="{% static 'myapp/assets/css/lightbox.css' %}">
+    <link rel="stylesheet" href="{% static 'Web/assets/css/lightbox.css' %}">
 <!--
 
 TemplateMo 571 Hexashop
@@ -53,7 +53,7 @@ https://templatemo.com/tm-571-hexashop
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="{% url 'homelink' %}" class="logo">
-                            <img src="{% static 'myapp/assets/images/logo.png' %}">
+                            <img src="{% static 'Web/assets/images/logo.png' %}">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -68,7 +68,7 @@ https://templatemo.com/tm-571-hexashop
                                     <li><a href="{% url 'aboutlink' %}">About Us</a></li>
                                     <li><a href="{% url 'productslink' %}">Products</a></li>
                                     <li><a href="">Single Product</a></li>
-                                    <li><a href="{% url 'contactlink' %}">Contact Us</a></li>
+                                    <li><a href="">Contact Us</a></li>
                                 </ul>
                             </li>
                             <li class="submenu">
@@ -94,6 +94,7 @@ https://templatemo.com/tm-571-hexashop
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Main Banner Area Start ***** -->
+    {% block content %}
     <div class="main-banner" id="top">
         <div class="container-fluid">
             <div class="row">
@@ -107,7 +108,7 @@ https://templatemo.com/tm-571-hexashop
                                     <a href="#">Purchase Now!</a>
                                 </div>
                             </div>
-                            <img src="{% static 'myapp/assets/images/left-banner-image.jpg' %}" alt="">
+                            <img src="{% static 'Web/assets/images/left-banner-image.jpg' %}" alt="">
                         </div>
                     </div>
                 </div>
@@ -152,7 +153,7 @@ https://templatemo.com/tm-571-hexashop
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="{% static 'myapp/assets/images/baner-right-image-02.jpg' %}">
+                                        <img src="{% static 'Web/assets/images/baner-right-image-02.jpg' %}">
                                     </div>
                                 </div>
                             </div>
@@ -172,7 +173,7 @@ https://templatemo.com/tm-571-hexashop
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="{% static 'myapp/assets/images/baner-right-image-03.jpg' %}">
+                                        <img src="{% static 'Web/assets/images/baner-right-image-03.jpg' %}">
                                     </div>
                                 </div>
                             </div>
@@ -192,7 +193,7 @@ https://templatemo.com/tm-571-hexashop
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="{% static 'myapp/assets/images/baner-right-image-04.jpg' %}">
+                                        <img src="{% static 'Web/assets/images/baner-right-image-04.jpg' %}">
                                     </div>
                                 </div>
                             </div> -->
@@ -256,7 +257,7 @@ https://templatemo.com/tm-571-hexashop
                                             <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="{% static 'myapp/assets/images/men-02.jpg' %}" alt="">
+                                    <img src="{% static 'Web/assets/images/men-02.jpg' %}" alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>Air Force 1 X</h4>
@@ -279,7 +280,7 @@ https://templatemo.com/tm-571-hexashop
                                             <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="{% static 'myapp/assets/images/men-03.jpg' %}" alt="">
+                                    <img src="{% static 'Web/assets/images/men-03.jpg' %}" alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>Love Nana ‘20</h4>
@@ -302,7 +303,7 @@ https://templatemo.com/tm-571-hexashop
                                             <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="{% static 'myapp/assets/images/men-01.jpg' %}" alt="">
+                                    <img src="{% static 'Web/assets/images/men-01.jpg' %}" alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>Classic Spring</h4>
@@ -375,7 +376,7 @@ https://templatemo.com/tm-571-hexashop
                                             <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="{% static 'myapp/assets/images/women-02.jpg' %}" alt="">
+                                    <img src="{% static 'Web/assets/images/women-02.jpg' %}" alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>Classic Dress</h4>
@@ -398,7 +399,7 @@ https://templatemo.com/tm-571-hexashop
                                             <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="{% static 'myapp/assets/images/women-03.jpg' %}" alt="">
+                                    <img src="{% static 'Web/assets/images/women-03.jpg' %}" alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>Spring Collection</h4>
@@ -421,7 +422,7 @@ https://templatemo.com/tm-571-hexashop
                                             <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="{% static 'myapp/assets/images/women-01.jpg' %}" alt="">
+                                    <img src="{% static 'Web/assets/images/women-01.jpg' %}" alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>Classic Spring</h4>
@@ -494,7 +495,7 @@ https://templatemo.com/tm-571-hexashop
                                             <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="{% static 'myapp/assets/images/kid-02.jpg' %}" alt="">
+                                    <img src="{% static 'Web/assets/images/kid-02.jpg' %}" alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>Summer Cap</h4>
@@ -517,7 +518,7 @@ https://templatemo.com/tm-571-hexashop
                                             <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="{% static 'myapp/assets/images/kid-03.jpg' %}" alt="">
+                                    <img src="{% static 'Web/assets/images/kid-03.jpg' %}" alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>Classic Kid</h4>
@@ -540,7 +541,7 @@ https://templatemo.com/tm-571-hexashop
                                             <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
-                                    <img src="{% static 'myapp/assets/images/kid-01.jpg' %}" alt="">
+                                    <img src="{% static 'Web/assets/images/kid-01.jpg' %}" alt="">
                                 </div>
                                 <div class="down-content">
                                     <h4>Classic Spring</h4>
@@ -591,12 +592,12 @@ https://templatemo.com/tm-571-hexashop
                             </div>
                             <div class="col-lg-6">
                                 <div class="first-image">
-                                    <img src="{% static 'myapp/assets/images/explore-image-01.jpg' %}" alt="">
+                                    <img src="{% static 'Web/assets/images/explore-image-01.jpg' %}" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="second-image">
-                                    <img src="{% static 'myapp/assets/images/explore-image-02.jpg' %}" alt="">
+                                    <img src="{% static 'Web/assets/images/explore-image-02.jpg' %}" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -648,7 +649,7 @@ https://templatemo.com/tm-571-hexashop
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
-                        <img src="{% static 'myapp/assets/images/instagram-02.jpg' %}" alt="">
+                        <img src="{% static 'Web/assets/images/instagram-02.jpg' %}" alt="">
                     </div>
                 </div>
                 <div class="col-2">
@@ -659,7 +660,7 @@ https://templatemo.com/tm-571-hexashop
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
-                        <img src="{% static 'myapp/assets/images/instagram-03.jpg' %}" alt="">
+                        <img src="{% static 'Web/assets/images/instagram-03.jpg' %}" alt="">
                     </div>
                 </div>
                 <div class="col-2">
@@ -670,7 +671,7 @@ https://templatemo.com/tm-571-hexashop
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
-                        <img src="{% static 'myapp/assets/images/instagram-04.jpg' %}" alt="">
+                        <img src="{% static 'Web/assets/images/instagram-04.jpg' %}" alt="">
                     </div>
                 </div>
                 <div class="col-2">
@@ -681,7 +682,7 @@ https://templatemo.com/tm-571-hexashop
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
-                        <img src="{% static 'myapp/assets/images/instagram-05.jpg' %}" alt="">
+                        <img src="{% static 'Web/assets/images/instagram-05.jpg' %}" alt="">
                     </div>
                 </div>
                 <div class="col-2">
@@ -692,7 +693,7 @@ https://templatemo.com/tm-571-hexashop
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </div>
-                        <img src="{% static 'myapp/assets/images/instagram-06.jpg' %}" alt="">
+                        <img src="{% static 'Web/assets/images/instagram-06.jpg' %}" alt="">
                     </div>
                 </div> -->
             </div>
@@ -753,7 +754,7 @@ https://templatemo.com/tm-571-hexashop
         </div>
     </div>
     <!-- ***** Subscribe Area Ends ***** -->
-    
+    {% endblock content %}
     <!-- ***** Footer Start ***** -->
     <footer>
         <div class="container">
@@ -761,7 +762,7 @@ https://templatemo.com/tm-571-hexashop
                 <div class="col-lg-3">
                     <div class="first-item">
                         <div class="logo">
-                            <img src="{% static 'myapp/assets/images/white-logo.png' %}" alt="hexashop ecommerce templatemo">
+                            <img src="{% static 'Web/assets/images/white-logo.png' %}" alt="hexashop ecommerce templatemo">
                         </div>
                         <ul>
                             <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
@@ -817,26 +818,26 @@ https://templatemo.com/tm-571-hexashop
     
 
     <!-- jQuery -->
-    <script src="{% static 'myapp/assets/js/jquery-2.1.0.min.js' %}"></script>
+    <script src="{% static 'Web/assets/js/jquery-2.1.0.min.js' %}"></script>
 
     <!-- Bootstrap -->
-    <script src="{% static 'myapp/assets/js/popper.js' %}"></script>
-    <script src="{% static 'myapp/assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'Web/assets/js/popper.js' %}"></script>
+    <script src="{% static 'Web/assets/js/bootstrap.min.js' %}"></script>
 
     <!-- Plugins -->
-    <script src="{% static 'myapp/assets/js/owl-carousel.js' %}"></script>
-    <script src="{% static 'myapp/assets/js/accordions.js' %}"></script>
-    <script src="{% static 'myapp/assets/js/datepicker.js' %}"></script>
-    <script src="{% static 'myapp/assets/js/scrollreveal.min.js' %}"></script>
-    <script src="{% static 'myapp/assets/js/waypoints.min.js' %}"></script>
-    <script src="{% static 'myapp/assets/js/jquery.counterup.min.js' %}"></script>
-    <script src="{% static 'myapp/assets/js/imgfix.min.js' %}"></script> 
-    <script src="{% static 'myapp/assets/js/slick.js' %}"></script> 
-    <script src="{% static 'myapp/assets/js/lightbox.js' %}"></script> 
-    <script src="{% static 'myapp/assets/js/isotope.js' %}"></script> 
+    <script src="{% static 'Web/assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'Web/assets/js/accordions.js' %}"></script>
+    <script src="{% static 'Web/assets/js/datepicker.js' %}"></script>
+    <script src="{% static 'Web/assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'Web/assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'Web/assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'Web/assets/js/imgfix.min.js' %}"></script> 
+    <script src="{% static 'Web/assets/js/slick.js' %}"></script> 
+    <script src="{% static 'Web/assets/js/lightbox.js' %}"></script> 
+    <script src="{% static 'Web/assets/js/isotope.js' %}"></script> 
     
     <!-- Global Init -->
-    <script src="{% static 'myapp/assets/js/custom.js' %}"></script>
+    <script src="{% static 'Web/assets/js/custom.js' %}"></script>
 
     <script>
 
